@@ -1,0 +1,30 @@
+Q1:
+By default, the Django Rest Framework uses Basic Authentication, which simply uses username and password to log in user and grant permissions
+and also Session Authentication, which stores state of user in browser and server's memory to avoid login every time
+
+
+Q2:
+httpie uses Basic Authentication mechanism which only uses username and password with only -a or --auth option and no specified auth mechanism
+
+the token authentication practice in my code:
+http POST http://127.0.0.1:8000/api/snippets/ "Authorization:Token 6174e83b14c2bddaf4ac27560a5a833763ae2adb" code="print('Token works')
+
+Q3:
+The Session Authentication is stored and maintained by theserver side, which could decide how long a session will be stored
+While the Cookie Authentication relies on the users themselves to store
+
+Compared with Basic Authentication, the Token Authentication provides a more secure identity since the tokens are generally complex and hard to be stolen,
+it also saves time of users from entering username and password
+
+
+Q4:
+During an OAuth2 authentication flow, the application will request three pairs of request and access grant. 
+It will authorization from user, access token from the authorization server(API) and the resource from resource server in sequence until the previous authorization is granted 
+
+When clicking "log in with Google", The application firstly asks authorization from user of a google account.
+After it is granted, the application use user authorization to request an access token from google.
+At last, the app shows access token and requests resouce from  Google.
+
+
+Q5:
+https://github.com/XZPshaw/authentication-lab
